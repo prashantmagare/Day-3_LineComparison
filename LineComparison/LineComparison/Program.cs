@@ -6,6 +6,17 @@ namespace LineComparisonProblem
     {
         ///variables
         public double length_Of_Line;
+
+        public interface ILine
+        {
+            public void Calc();
+        }
+
+
+    }
+    public class Program : LineComparision
+    {
+
         ///method for calculation
         public void Calc(double x1, double y1, double x2, double y2)
         {
@@ -13,14 +24,11 @@ namespace LineComparisonProblem
             double Y = Math.Pow(y2 - y1, 2.0);
             length_Of_Line = Math.Sqrt(X + Y);
         }
-    }
-    public class Program
-    {
         public static void Main(String[] args)
         {  
             Console.WriteLine("Welcome To Line Comparison Problem ");
 
-            LineComparision lc = new LineComparision();
+            Program lc = new Program();
             Console.WriteLine("enter x1,y1,x2,y2 values\n");
             double a = Convert.ToDouble(Console.ReadLine());
             double b = Convert.ToDouble(Console.ReadLine());
@@ -36,7 +44,7 @@ namespace LineComparisonProblem
             double f = Convert.ToDouble(Console.ReadLine());
             double g = Convert.ToDouble(Console.ReadLine());
             double h = Convert.ToDouble(Console.ReadLine());
-            LineComparision lc2 = new LineComparision();
+            Program lc2 = new Program();
             lc2.Calc(e, f, g, h);
             Console.WriteLine("Line 2 Length is = " + lc2.length_Of_Line);
             ///compairing by both line values using Equals method
