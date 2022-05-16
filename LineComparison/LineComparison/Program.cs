@@ -11,8 +11,6 @@ namespace LineComparisonProblem
         {
             public void Calc();
         }
-
-
     }
     public class Program : LineComparision
     {
