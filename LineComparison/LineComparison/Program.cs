@@ -17,9 +17,10 @@ namespace LineComparisonProblem
     public class Program
     {
         public static void Main(String[] args)
-        {
-            LineComparision lc = new LineComparision();
+        {  
             Console.WriteLine("Welcome To Line Comparison Problem ");
+
+            LineComparision lc = new LineComparision();
             Console.WriteLine("enter x1,y1,x2,y2 values\n");
             double a = Convert.ToDouble(Console.ReadLine());
             double b = Convert.ToDouble(Console.ReadLine());
@@ -28,6 +29,19 @@ namespace LineComparisonProblem
             lc.Calc(a, b, c, d);
              
             Console.WriteLine("Line Length is = " + lc.length_Of_Line);
+
+            ///line 2 object creating and reading input from user
+            Console.WriteLine("Enter Sencond line values x1,y1,x2,y2\n");
+            double e = Convert.ToDouble(Console.ReadLine());
+            double f = Convert.ToDouble(Console.ReadLine());
+            double g = Convert.ToDouble(Console.ReadLine());
+            double h = Convert.ToDouble(Console.ReadLine());
+            LineComparision lc2 = new LineComparision();
+            lc2.Calc(e, f, g, h);
+            Console.WriteLine("Line 2 Length is = " + lc2.length_Of_Line);
+            ///compairing by both line values using Equals method
+            Console.WriteLine("Checking lines are equal the answer is");
+            Console.WriteLine((lc.length_Of_Line).Equals(lc2.length_Of_Line));
         }
 
     }
