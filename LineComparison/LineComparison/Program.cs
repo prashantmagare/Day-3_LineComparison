@@ -42,6 +42,10 @@ namespace LineComparisonProblem
             ///compairing by both line values using Equals method
             Console.WriteLine("Checking lines are equal the answer is");
             Console.WriteLine((lc.length_Of_Line).Equals(lc2.length_Of_Line));
+
+            ///comparing both line values to find line 1 is greater than line 2 Returns "1" if line 1 is greater then line, if line 1 is less than line 2 "-1"
+            Console.WriteLine("Compairing line 1 to line 2 \nif returned 1 :line 1 is greater than line 2\nif returned -1 :line 1 is less than line 2");
+            Console.WriteLine((lc.length_Of_Line).CompareTo(lc2.length_Of_Line));
         }
 
     }
